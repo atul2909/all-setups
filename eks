@@ -10,3 +10,8 @@ eksctl create cluster \
   --managed \
   --nodes 2 \
   --node-type t3.medium
+---------------------------------------
+aws eks update-kubeconfig \
+  --region us-east-1 \
+  --name atul-k8s-local
+## this will update eks cluster to look at correct config in ~/.kube/config file
