@@ -8,5 +8,5 @@ mv kops-linux-amd64 /usr/local/bin/kops
 echo "export PATH=$PATH:/usr/local/bin/" >> source .bashrc
 
 export KOPS_STATE_STORE=s3://h2h-1682-kopsstatestore.k8s.local
-kops create cluster --name atul.k8s.local --zones us-east-1b --control-plane-image ami-091138d0f0d41ff90  --control-plane-count=1 --control-plane-size t3.large --image ami-091138d0f0d41ff90  --node-count=2 --node-size t3.large
+kops create cluster --name atul.k8s.local --zones us-east-1a --control-plane-image ami-091138d0f0d41ff90  --control-plane-count=1 --control-plane-size t3.large --image ami-091138d0f0d41ff90  --node-count=2 --node-size t3.large
 kops update cluster --name atul.k8s.local --yes --admin
