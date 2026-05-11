@@ -1,0 +1,12 @@
+curl -sSL "https://github.com/weaveworks/eksctl/releases/latest/download/eksctl_Linux_amd64.tar.gz" -o eksctl.tar.gz
+tar -xzf eksctl.tar.gz
+sudo mv eksctl /usr/local/bin/
+---------------------------------------------
+eksctl version
+--------------------------------------------
+eksctl create cluster \
+  --name atul-k8s-local \
+  --region us-east-1 \
+  --managed \
+  --nodes 2 \
+  --node-type t3.medium
